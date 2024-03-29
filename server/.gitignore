@@ -31,3 +31,5 @@ prod-ca-2021.crt
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/config/credentials/production.key

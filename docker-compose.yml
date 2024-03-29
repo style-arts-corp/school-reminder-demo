@@ -2,17 +2,17 @@ version: '3.8'
 services:
   rails-api:
     build:
-      context: ./backend
+      context: ./server
       dockerfile: Dockerfile
     volumes:
-      - ./backend:/app
+      - ./server:/app
     ports:
       - "3001:3000"
     depends_on:
       - db
     environment:
       - RAILS_ENV=development
-    container_name: backend
+    container_name: server
 
   react-app:
     build:
