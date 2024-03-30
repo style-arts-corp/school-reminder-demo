@@ -32,9 +32,9 @@ services:
     image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    # environment:
-      # POSTGRES_USER: postgres
-      # POSTGRES_PASSWORD: sa_sales216!
+    environment:
+      POSTGRES_USER: postgres.becintbqujhlusyioqsk
+      POSTGRES_PASSWORD: Reminder-Demo-aiso
       # POSTGRES_DB: reminder
     ports:
       - "5432:5432"
