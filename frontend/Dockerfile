@@ -16,6 +16,9 @@ COPY . .
 # アプリケーションをビルド
 # RUN yarn build
 
+# husky の設定を適用
+RUN yarn prepare
+
 # 開発環境での実行コマンド
 CMD ["yarn", "dev"]
 
