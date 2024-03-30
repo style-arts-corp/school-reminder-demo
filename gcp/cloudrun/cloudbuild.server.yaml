@@ -23,6 +23,7 @@ steps:
       - us-central1
       - '--update-env-vars'
       - 'RAILS_MASTER_KEY=9934277a800cad248585d3ac5a4ad849'
+      - '--allow-unauthenticated'
     entrypoint: gcloud
 images:
   - 'gcr.io/tech-welfare/aiso-sample-todo-app:$COMMIT_SHA'
