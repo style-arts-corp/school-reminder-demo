@@ -4,6 +4,6 @@
 # It renders a JSON response with a status and a message.
 class HomeController < ApplicationController
   def index
-    render json: { status: 'success', message: 'hello world! 2' }
+    render json: { status: 'success', message: 'hello world!' }
   end
 end
