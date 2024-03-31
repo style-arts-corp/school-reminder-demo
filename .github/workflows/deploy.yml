@@ -28,6 +28,8 @@ jobs:
       - name: Build
         run: yarn build
         working-directory: frontend
+        env:
+          VITE_API_URL: "https://aiso-reminder-server-cloudrun-obcs3lfy6a-uc.a.run.app"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
