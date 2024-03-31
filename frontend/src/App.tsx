@@ -13,10 +13,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 const fetchHealth = async () => {
-  const response = await axios.get(
-    // 'https://aiso-reminder-server-cloudrun-obcs3lfy6a-uc.a.run.app/',
-    'http://localhost:3001',
-  );
+  const apiUrl = import.meta.env.API_URL;
+  const response = await axios.get(apiUrl);
   return response.data;
 };
 
@@ -24,7 +22,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const { isLoading, error, data } = useQuery({
-    queryKey: ['helloWorld'], // 配列
+    queryKey: ['helloWorld'], // キャッシュのキー
     queryFn: fetchHealth, // データ取得の関数
   });
 
@@ -40,6 +38,7 @@ function App() {
   return (
     <>
       <Box>
+        {/* Vite も勉強してほしいが，難しいので一旦スキップ */}
         {/* <Link to="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </Link> */}
@@ -74,12 +73,12 @@ function App() {
         </Button>
         <p>
           <code>src/App.tsx</code>{' '}
-          を編集＆ファイル保存してリロードしてみてください。
+          からこの文章を見つけて，この文章を編集＆ファイル保存してみてください。
         </p>
       </Box>
       <p className="read-the-docs">
         React logo や MUI logo
-        をクリックして公式サイトにアクセスしてみてください。
+        をクリックして公式サイトにアクセスしてみてください。公式ドキュメントで勉強してみましょう！
       </p>
 
       <p className="read-the-docs">サーバーから取得した文字列は...</p>
