@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
 import { Logos } from './Logos';
 import './Top.css';
+import { Link } from 'react-router-dom';
 
 type TopProps = {
   data: { message: string } | null;
@@ -62,6 +63,8 @@ export const Top: React.FC<TopProps> = ({ data, count, setCount }) => {
       <Typography variant="h1" component="h2">
         {data?.message || 'loading...'}
       </Typography>
+
+      <Link to="about">About へ</Link>
     </>
   );
 };

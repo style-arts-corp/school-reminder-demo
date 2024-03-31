@@ -36,3 +36,4 @@ jobs:
         with:
           github_token: ${{ secrets.AISO_PERSONAL_ACCESS_TOKEN }}
           publish_dir: ./frontend/dist  # ビルド後の静的ファイルが格納されているディレクトリを指定します
+          cname: reminder-aiso.style-arts.com
