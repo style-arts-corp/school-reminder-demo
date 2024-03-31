@@ -15,7 +15,7 @@ steps:
     args:
       - '-c'
       - |
-        gsutil rsync -d -r out gs://school-reminder-web-aiso
+        gsutil rsync -d -r dist gs://school-reminder-web-aiso
     entrypoint: bash
     dir: 'frontend'
 logsBucket: 'tech-school/reminder/front-aiso'
