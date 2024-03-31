@@ -18,4 +18,4 @@ steps:
         gsutil rsync -d -r out gs://school-reminder-web-aiso
     entrypoint: bash
     dir: 'frontend'
-logsBucket: 'school/reminder/front-aiso'
+logsBucket: 'tech-school/reminder/front-aiso'

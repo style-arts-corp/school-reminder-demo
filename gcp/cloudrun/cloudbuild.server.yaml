@@ -27,4 +27,4 @@ steps:
     entrypoint: gcloud
 images:
   - 'gcr.io/tech-welfare/aiso-sample-todo-app:$COMMIT_SHA'
-logsBucket: 'school/reminder/server-aiso'
+logsBucket: 'tech-school/reminder/server-aiso'
